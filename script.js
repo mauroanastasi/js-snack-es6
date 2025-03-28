@@ -90,4 +90,5 @@ for(let i=0; i<team.length; i++){
     team[i].falliSubiti = generaPuntiFalli() 
 }
 
+
 console.log(team)
