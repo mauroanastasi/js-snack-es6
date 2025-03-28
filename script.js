@@ -3,22 +3,34 @@
 const bike = [
     {
         nome: `superquantum`,
-        peso: `35kg`
+        peso: `35`
     },
     {
         nome: `essential`,
-        peso: `35kg`
+        peso: `25`
     },
     {
         nome: `spiyceone`,
-        peso: `35kg`
+        peso: `37`
     },
     {
         nome: `bartella`,
-        peso: `35kg`
+        peso: `28`
     },
     {
         nome: `mountainfive`,
-        peso: `35kg`
+        peso: `29`
     },
 ]
+
+let maxWeight =  bike[0].peso;
+let minWeight;
+
+for(let i=0; i<bike.length; i++){
+    if(maxWeight > bike[i].peso){
+        minWeight = bike[i];
+        maxWeight = bike[i].peso;
+    }
+}
+
+console.log(minWeight);
