@@ -41,37 +41,53 @@ console.log(minWeight);
 const team = [
     {
         nome: `Juve`,
-        puntiFatti: `92`,
-        falliSubiti: `11`
+        puntiFatti: `0`,
+        falliSubiti: `0`
     },
     {
         nome: `Palermo`,
-        puntiFatti: `83`,
-        falliSubiti: `6`
+        puntiFatti: `0`,
+        falliSubiti: `0`
 
     },
     {
         nome: `Frosinone`,
-        puntiFatti: `44`,
-        falliSubiti: `9`
+        puntiFatti: `0`,
+        falliSubiti: `0`
 
     },
     {
         nome: `Cagliari`,
-        puntiFatti: `46`,
-        falliSubiti: `7`
+        puntiFatti: `0`,
+        falliSubiti: `0`
 
     },
     {
         nome: `Benevento`,
-        puntiFatti: `33`,
-        falliSubiti: `5`
+        puntiFatti: `0`,
+        falliSubiti: `0`
 
     },
     {
         nome: `Atalanta`,
-        puntiFatti: `78`,
-        falliSubiti: `14`
+        puntiFatti: `0`,
+        falliSubiti: `0`
 
     },
 ]
+
+// creo la funzione che genera automaticamente puntifatti e fallisubiti:
+
+const generaPuntiFalli = () => {
+    return Math.floor(Math.random() * 100) + 1;
+ } 
+
+ //  richiamo funzione in un for per assegnare i punti/falli
+    // ciclo gli oggetti di team
+for(let i=0; i<team.length; i++){
+    // assegno valori
+    team[i].puntiFatti = generaPuntiFalli() 
+    team[i].falliSubiti = generaPuntiFalli() 
+}
+
+console.log(team)
