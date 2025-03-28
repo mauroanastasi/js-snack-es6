@@ -88,7 +88,22 @@ for(let i=0; i<team.length; i++){
     // assegno valori
     team[i].puntiFatti = generaPuntiFalli() 
     team[i].falliSubiti = generaPuntiFalli() 
+    // newTeam.push(team[i].nome, team[i].falliSubiti);
+}
+console.log(team)
+
+
+
+
+// newTeam.push(team.nome, team.falliSubiti)
+
+// creo nuovo array per inserire solo nomi e fallisubiti dell array di oggetti team, ciclo il vecchio e con push li inserisco:
+let newTeam = [];
+for (let i = 0; i < team.length; i++) {
+    newTeam.push({
+        nome: team[i].nome,
+        falliSubiti: team[i].falliSubiti
+    });
 }
 
-
-console.log(team)
+console.log(newTeam)
